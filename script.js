@@ -1,7 +1,16 @@
 var startButton = document.querySelector(".start-button");
-var timer;
-var timerCount;
-var quizIndex = 0;
+
+startButton.addEventListener("click", function (event) {
+    timerStart(); {
+        renderquestion(0);
+    }
+});
+
+var timer = document.querySelector('.timer');
+var answerBox = document.querySelector('.answerContainer');
+var endMessage = document.querySelector('#scroll-text');
+var timerCount = 90;
+var questionCount = 0;
 var quiz = [
   {
     question: "Javascript is a programing language",
@@ -19,43 +28,61 @@ var quiz = [
     answerchoices: ["boolean", "array", "string", "number", "container" ]
   }
 ]
+function timerStart() {
+    // Sets interval in variable
+    var timerInterval = setInterval(function() {
+      timerCount--;
+      timer.innerHTML = timerCount;
+  
+      if(timerCount === 0) {
+        // Stops execution of action at set interval
+        clearInterval(timerInterval);
+        // Calls function to create and append image
+        sendMessage();
+      }
+  
+    }, 1000);
+  }
+    
 
-renderquestion(quizIndex);
-//i = 0; i < quiz;
-    var answerlist = document.getElementById("answerlist");
 
-answerlist.addEventListener("click", function (event) {
-if (quiz[quizIndex].rightanswer == event.target.innerText) {
-     alert("correct!");
-} else alert("Incorrect!")
- quizIndex++;
-    renderquestion(quizIndex);
-    var answerlist = document.getElementById("answerlist");
-
-
-
-    console.log(event.target.innerText, i)
-})
-
-function renderquestion(j)
-{
+function renderquestion() {
     // Create element:
-    var questionprompt = document.createElement("p");
-    questionprompt.innerText = quiz[j].question;
+    var questionprompt = document.querySelector(".questionBox");
+    questionprompt.innerHTML = quiz[questionCount].question;
 
     // Append to body:
-    document.body.appendChild(questionprompt);
+    // document.body.appendChild(questionprompt);
 
     var answerlist = document.createElement("ol");
-    answerlist.setAttribute("id", "answerlist");
-    document.body.appendChild(answerlist);
+    // answerlist.setAttribute("id", "answerlist");
+    answerBox.appendChild(answerlist);
     // var list = document.getElementById("question");
   
-    quiz[j].answerchoices.forEach((item) => {
+    quiz[questionCount].answerchoices.forEach((item) => {
         var li = document.createElement("li");
         li.innerText = item;
         answerlist.appendChild(li);
     })
     // listen for response
+    answerlist.addEventListener("click", function (event) {
+        if (quiz[questionCount].rightanswer == event.target.innerText) {
+            alert("correct!");
+            questionCount++;
+            if (questionCount > quiz.length || timerCount <= 0) { }
 
+        } else {
+            alert("GAME OVER!");
+        } else {
+            alert("Incorrect!");
+            questionCount++;
+            timerCount -= 3;
+            if (questionCount > quiz.length || timerCount <= 0) {
+
+            } else {
+
+                renderquestion();
+            }
+        }
+})
 } 
