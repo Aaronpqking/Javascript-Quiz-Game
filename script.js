@@ -1,4 +1,4 @@
-var startButton = document.querySelector(".start-button");
+var startButton = document.querySelector("#start-button");
 
 startButton.addEventListener("click", function (event) {
     
@@ -77,7 +77,7 @@ function timerStart() {
 }
   
 var questionprompt = document.querySelector(".questionBox");    
-
+var quizComplete = document.querySelector(".quiz-complete-screen");
   
 var answerlist = document.createElement("ul");
 
@@ -93,7 +93,7 @@ function renderquestion() {
     answerlist.appendChild(li);
   }
  
-  answerlist.addEventListener("click", function (event) {
+  answerlist.addEventListener("click", function mouseClick (event) {
     if (quiz[questionCount].rightanswer == event.target.innerText) {
       alert("CORRECT!");
       correct = true;
@@ -102,25 +102,30 @@ function renderquestion() {
       alert("Incorrect");
       correct = false;
     }
+      this.removeEventListener('click', mouseClick);
     nextQuestion();
   })
 }    
  
 function nextQuestion() {
 
-  while (questionprompt.firstChild) {
-    questionprompt.removeChild(questionprompt.firstChild);
-  }
-  while (answerlist.firstChild) {
-    answerlist.removeChild(answerlist.firstChild);
-  }
+  questionprompt.innerHTML = "";
+  answerlist.innerHTML = "";
+
+  // while (questionprompt.firstChild) {
+    // questionprompt.removeChild(questionprompt.firstChild);
+  // }
+  // while (answerlist.firstChild) {
+    // answerlist.removeChild(answerlist.firstChild);
+  // }
       
   if (correct == true) {
     score = score + 100;
   } else {
     timerCount -= 3;
   }
-  questionCount++;
+  console.log("Hi Andrew!")
+  questionCount +=1;
   if (questionCount < quiz.length && timerCount > 0) {
 
 
@@ -133,8 +138,13 @@ function nextQuestion() {
 }
 
 function endGame() {
+  timerCount = 0;
+  questionprompt.style.display = "none";
+  quizComplete.style.display = "block";
 
-  alert("Good Game!!")
+
+  
+  
 //this function displays score/prompts for initials/displays it added to highscore
 
 }
