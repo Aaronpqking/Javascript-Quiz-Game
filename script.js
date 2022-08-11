@@ -30,27 +30,36 @@ var quiz = [
     question: "Which of these are not a Javascript data type?",
     rightanswer: "container",
     answerchoices: ["boolean", "array", "string", "number", "container" ]
-    }
-    // {
-    //     question: "",
-    //     rightanswer: "",
-    //     answerchoices: "",
-    // },
-    // {
-    //     question: "",
-    //     rightanswer:"",
-    //     answerchoices: "",       
-    // },
-    // {
-    //     question: "",
-    //     rightanswer: "",
-    //     answerchoices: "",
-    // },
-    // {
-    //     question: "",
-    //     rightanswer: "",
-    //     answerchoices: "",
-    // } 
+    },
+    {
+        question: "Which HTML tag do we use to recognize JavaScript?",
+        rightanswer: "<script>",
+        answerchoices: ["<jQuery>", "<js>", "<code>", "<script>"]
+    },
+    {
+        question: "JavaScript Can only be written in JavaScript",
+        rightanswer:"False",
+        answerchoices: ["True", "False"]    
+    },
+    {
+        question: "Choose the proper symbols to create an array",
+        rightanswer: "[]",
+        answerchoices: ["[  ]", "{  }", "(  )", "<  >"]
+    },
+    {
+        question: "How does a for loop start?",
+        rightanswer: "for (i=0; i <= 5; i++)",
+        answerchoices: ["for (i=0; i <= 5; i++)","for() = i++", "for i(i=0; i > 5; i--)", "for(i)= i++",]
+  }, 
+  {
+        question: "How do you comment in JavaScript?",
+        rightanswer: "//comment",
+        answerchoices: ["<comment>","**\"comment\"**", "//comment", "comment:",]
+}, {
+         question: "Java is shorthand for JavaScript",
+         rightanswer: "False",
+         answerchoices: ["True","False"]
+}, 
 ]
 
 function timerStart() {
