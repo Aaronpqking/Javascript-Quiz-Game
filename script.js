@@ -120,7 +120,6 @@ function nextQuestion() {
   } else {
     timerCount -= 3;
   }
-  console.log("Hi Andrew!");
   questionCount += 1;
   if (questionCount < quiz.length && timerCount > 0) {
     renderquestion();
