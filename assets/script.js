@@ -10,19 +10,16 @@ startButton.addEventListener("click", function (event) {
 var timer = document.querySelector(".timer");
 var answerBox = document.querySelector(".answerContainer");
 var endMessage = document.querySelector("#scroll-text");
-<<<<<<< HEAD
 var timerCount = 5;
 var questionCount = 0;
 var correct = false;
 var score = 0;
 var hsarray = [];
-=======
 var timerCount = 90;
 var questionCount = 0;
 var correct = false;
 var score = document.querySelector(".score");
     score = 0;
->>>>>>> ab01a4763195490691f7370aa41cf979057ebcea
 var quiz = [
   {
     question: "Javascript is a programing language",
@@ -83,10 +80,7 @@ function timerStart() {
 
     if (timerCount <= 0) {
       clearInterval(timerInterval);
-<<<<<<< HEAD
       endGame();
-=======
->>>>>>> ab01a4763195490691f7370aa41cf979057ebcea
     }
   }, 1000);
 }
@@ -111,10 +105,7 @@ function renderquestion() {
     if (quiz[questionCount].rightanswer == event.target.innerText) {
       alert("CORRECT!");
       correct = true;
-<<<<<<< HEAD
-=======
       console.log("clicked");
->>>>>>> ab01a4763195490691f7370aa41cf979057ebcea
     } else {
       alert("Incorrect");
       correct = false;
@@ -128,21 +119,14 @@ function nextQuestion() {
   questionprompt.innerHTML = "";
   answerlist.innerHTML = "";
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> ab01a4763195490691f7370aa41cf979057ebcea
   if (correct == true) {
     score = score + 100;
   } else {
     timerCount -= 3;
   }
-<<<<<<< HEAD
   // questionCount += 1;
-=======
   questionCount += 1;
->>>>>>> ab01a4763195490691f7370aa41cf979057ebcea
   if (questionCount < quiz.length && timerCount > 0) {
     renderquestion();
   } else {
@@ -155,16 +139,16 @@ function endGame() {
   questionprompt.style.display = "none";
   quizComplete.style.display = "block";
 
-<<<<<<< HEAD
+
   document.getElementById("dis-score").innerHTML = "Your score: " + score;
-=======
+
   score.innerText = score;
     answerlist.appendChild(li);
   
   var input = document.getElementById("score");
   localStorage.setItem("server", input.val());
   //this function displays score/prompts for initials/displays it added to highscore
->>>>>>> ab01a4763195490691f7370aa41cf979057ebcea
+
 }
 function saveHighScore() {
   var input = document.getElementById("initials").value;
