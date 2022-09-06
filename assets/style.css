@@ -16,9 +16,8 @@ body {
 
   .info-bar {
     border-color:  gold;
-    border-width: 5rem;
+    background-clip: border-box;
     background-color: white;
-    margin-bottom:-10rem
   }
 
   .question-container {
@@ -29,6 +28,8 @@ body {
     flex-flow: row;
     background-color: black;
     justify-content: flex-end;
+    background-clip: border-box;
+
     }
 
     .timer {
@@ -47,26 +48,34 @@ background-color: black;
 
 
 .question-box {
-    background-color: black;
     color:white;
+    background-color: black;
     justify-content: center;
    flex-wrap: wrap;
  }
  
-.question-Box ul li {
+.question-Box a li {
   list-style-type: none;
+  text-align: center;
+  font-size: x-large;
 
 }
 .answerbox {
   font-size: large;
+}
+.answerlist {
+  background-color: black;
 }
 
 .quiz-complete-screen {
     display: none;
 }
 
-.highscore-screen {
+#highscore-screen {
+  justify-content: center;
     display: none;
+    list-style-type: none;
+
 }
 
 
@@ -84,10 +93,10 @@ background-color: black;
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  
-  -moz-animation: my-animation 20s linear infinite;
-  -webkit-animation: my-animation 20s linear infinite;
-  animation: my-animation 20s linear infinite;
+  text-align: center;
+  -moz-animation: my-animation 5s linear infinite;
+  -webkit-animation: my-animation 5s linear infinite;
+  animation: my-animation 5s linear infinite;
 }
 
 for Firefox
