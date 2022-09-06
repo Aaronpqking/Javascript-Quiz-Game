@@ -2,70 +2,64 @@
     margin: 0%;
     padding: 0%;
 }
+navbar {
+  flex-basis:content;
+  justify-content: space-around;
+}
 body {
+
     justify-content: center;
     background-image:url(./Java-Script3.jpg);
+    
+    /* background-color: black; */
+  }
 
-}
+  .info-bar {
+    border-color:  gold;
+    border-width: 5rem;
+    background-color: white;
+    margin-bottom:-10rem
+  }
 
-
-
-
-
-.question-container {
+  .question-container {
     padding: 10px;
     height: 100%;
     margin: 0 auto;
     display: flex;
-    flex-direction: row-reverse;
-    align-content: space-around;
-    justify-content:space-evenly;
-    
+    flex-flow: row;
+    background-color: black;
+    justify-content: flex-end;
+    }
 
-}
+    .timer {
+      font-size: .5 em;
+      float: right;
+      
+      flex-direction:row;
+      order: 5;
+    }
 
-.info-bar {
-  border-color:  gold;
-}
+      .question-screen {
+background-color: black;
+    }
+  
 
-.timer {
-    color: white;
-    background-color: grey;
-    font-size: 1.3em;
-    float: right;
 
-}
-
-.highscore-button {
-
-    outline: none;
-    background-color: white;
-    color: black;
-    font-size: 1.3em;
-
-}
-.start-button {
-border-style: solid 5px black; 
-}
 
 .question-box {
-    color:white;
     background-color: black;
-    height: 85vh;
-    width: 60%;
-    padding-top: 50px;
+    color:white;
+    justify-content: center;
+   flex-wrap: wrap;
  }
+ 
 .question-Box ul li {
-
   list-style-type: none;
-}
-main {}
-
-.question-screen {
-
 
 }
-
+.answerbox {
+  font-size: large;
+}
 
 .quiz-complete-screen {
     display: none;
@@ -77,12 +71,13 @@ main {}
 
 
 
- #scroll-container {
+ /* #scroll-container {
   background-color: white;
   border: 3px solid black;
   border-radius: 5px;
   overflow: hidden;
-}
+} */
+
 
 #scroll-text {
 
@@ -95,7 +90,7 @@ main {}
   animation: my-animation 20s linear infinite;
 }
 
-/* for Firefox */
+for Firefox
 @-moz-keyframes my-animation {
   from { -moz-transform: translateX(100%); }
   to { -moz-transform: translateX(-100%); }
@@ -118,4 +113,4 @@ main {}
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
- */
+ */ */

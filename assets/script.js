@@ -22,7 +22,7 @@ var score = document.querySelector(".score");
     score = 0;
 var quiz = [
   {
-    question: "Javascript is a programing language",
+    question: "Javascript is a programing language:",
     rightanswer: "True",
     answerchoices: ["True", "False"],
   },
@@ -85,15 +85,18 @@ function timerStart() {
   }, 1000);
 }
 
-var questionprompt = document.querySelector(".questionBox");
+var questionprompt = document.querySelector(".question-box");
 var quizComplete = document.querySelector(".quiz-complete-screen");
-
 var answerlist = document.createElement("ul");
 
 function renderquestion() {
   questionprompt.innerHTML = quiz[questionCount].question;
-  answerlist.setAttribute("id", "answerlist");
   answerBox.appendChild(answerlist);
+  answerlist.setAttribute("id", "answerlist");
+ 
+  answerlist.className= "list-group-item list-group-item-action";
+
+
 
   for (var i = 0; i < quiz[questionCount].answerchoices.length; i++) {
     var li = document.createElement("li");
