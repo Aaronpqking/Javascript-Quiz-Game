@@ -206,7 +206,7 @@ function displayHighscore() {
   startButton.disabled = false;
   questionprompt.style.display = "none";
   highScoreScreen.style.display = "block";
-  quizComplete.style.display = "block";
+  quizComplete.style.display = "none";
   // scores.className = "list-group-flush";
   hsarray = JSON.parse(localStorage.getItem("highscore"));
 
