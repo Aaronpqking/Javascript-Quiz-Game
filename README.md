@@ -1,5 +1,11 @@
 # Javascript-Quiz-Game
 
+https://github.com/aKingsView/Javascript-Quiz-Game
+
+ 
+
+https://akingsview.github.io/Javascript-Quiz-Game/
+
 AS A coding boot camp student
 I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
