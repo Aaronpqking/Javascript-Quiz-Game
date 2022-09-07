@@ -27,4 +27,4 @@ THEN I can save my initials and score
 
 
 This is version 2.0 If you peek at the main branch of this repo you'll have clear picture of where this project started. Although it was functional it was buggy and not a great user experience.
-Updates include a polished GUI, removal of system alerts, and buttons for answer choices. I challenged m yself to make this mobile first which was an intersting adventure; thus the portrait image.
+Updates include a polished GUI, removal of system alerts, and buttons for answer choices. I challenged myself to make this mobile first which was an intersting adventure; thus the portrait image.
