@@ -18,5 +18,7 @@ THEN I can save my initials and score
 
 
 ![2022-09-07 (2)](https://user-images.githubusercontent.com/106622740/188791477-ec8459cc-410e-4e7f-95a4-6ea86f391e0e.png)
+
+
 This is version 2.0 If you peek at the main branch of this repo you'll have clear picture of where this project started. Although it was functional it was buggy and not a great user experience.
 Updates include a polished GUI, removal of system alerts, and buttons for answer choices. I challenged m yself to make this mobile first which was an intersting adventure; thus the portrait image.
